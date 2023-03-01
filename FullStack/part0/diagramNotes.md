@@ -1,4 +1,5 @@
-sequenceDiagram
+```mermaid
+    sequenceDiagram
     participant browser
     participant server
     
@@ -7,7 +8,7 @@ sequenceDiagram
     server-->>browser: status code 302 - redirect to /notes
     deactivate server
     
-browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
     deactivate server
@@ -30,3 +31,4 @@ browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server    
 
     Note right of browser: The browser executes the callback function that renders the notes 
+```
